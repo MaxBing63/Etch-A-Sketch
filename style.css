@@ -12,4 +12,12 @@ body {
 .squares {
     width: 480px;
     height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
 }
