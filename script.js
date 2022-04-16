@@ -1,9 +1,13 @@
-let squaresContainer = document.querySelector('.squares');
-
-for(let i = 0; i < 16*16; i++) {
-    let square = document.createElement('div');
-    square.classList.add('square');
-    squaresContainer.appendChild(square);
+function makeGrid(numOfSquares) {
+    let squaresContainer = document.querySelector('.squares');
+    let sizeOfSquare = (480/numOfSquares) + 'px';
+    for(let i = 0; i < Math.pow(numOfSquares, 2); i++) {
+        let square = document.createElement('div');
+        square.style.width = sizeOfSquare;
+        square.style.height = sizeOfSquare;
+        square.classList.add('square');
+        squaresContainer.appendChild(square);
+    }
 }
 
 const squares = document.querySelectorAll('.square');
