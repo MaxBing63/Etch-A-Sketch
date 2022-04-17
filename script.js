@@ -18,3 +18,16 @@ function addHover() {
             el.style.backgroundColor = 'red';
         }));
 }
+
+function clearGrid() {
+    const colored = document.querySelectorAll('.square');
+    for(let i = 0; i < colored.length; i++) {
+        let square = colored[i];
+        square.style.backgroundColor = '';
+    }
+    const grid = document.querySelector('.squares');
+    while(grid.lastChild) {
+        grid.removeChild(grid.lastChild);
+    }
+}
+
