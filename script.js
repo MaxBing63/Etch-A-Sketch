@@ -10,11 +10,13 @@ function makeGrid(numOfSquares) {
     }
 }
 
-const squares = document.querySelectorAll('.square');
-squares.forEach(el => 
-    el.addEventListener('mouseover', () => {
-        el.style.backgroundColor = 'red';
-    }));
+function addHover() {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(el => 
+        el.addEventListener('mouseover', () => {
+            el.style.backgroundColor = 'red';
+        }));
+}
     
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', clearGrid);
