@@ -1,3 +1,5 @@
+makeGrid(16);
+
 function makeGrid(numOfSquares) {
     let squaresContainer = document.querySelector('.squares');
     let sizeOfSquare = (480/numOfSquares) + 'px';
@@ -31,5 +33,9 @@ function promptUser() {
     while(choice < 16 || choice > 100) {
         choice = prompt('Enter a number between 16 and a 100.');
     }
-    return choice;
+    makeGrid(choice);
 }
+
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', clearGrid);
+clear.addEventListener('click', promptUser);
