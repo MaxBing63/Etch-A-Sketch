@@ -31,3 +31,10 @@ function clearGrid() {
     }
 }
 
+function promptUser() {
+    let choice = 0;
+    while(choice < 16 || choice > 100) {
+        choice = prompt('Enter a number between 16 and a 100.');
+    }
+    return choice;
+}
