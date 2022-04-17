@@ -8,6 +8,7 @@ function makeGrid(numOfSquares) {
         square.classList.add('square');
         squaresContainer.appendChild(square);
     }
+    addHover();
 }
 
 function addHover() {
@@ -16,15 +17,4 @@ function addHover() {
         el.addEventListener('mouseover', () => {
             el.style.backgroundColor = 'red';
         }));
-}
-    
-const clear = document.querySelector('#clear');
-clear.addEventListener('click', clearGrid);
-
-function clearGrid(){
-    const colored = document.querySelectorAll('.square');
-    for(let i = 0; i < colored.length; i++){
-        let square = colored[i];
-        square.style.backgroundColor = '';
-    }
 }
